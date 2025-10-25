@@ -14,3 +14,10 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+# CINEMATIC ACTIVISM Workshop
+
+**Registration fee: 250 EUR**
+
+[![Pre-register for CINEMATIC ACTIVISM Workshop](https://img.shields.io/badge/Pre--register-Click_here-brightgreen)](https://forms.gle/uYpHrhBxG6Grq6yy6)
+
+Or click here: https://forms.gle/uYpHrhBxG6Grq6yy6
