@@ -1,239 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentary Filmmaking Workshop – Finland 2025</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CINEMATIC ACTIVISM – Documentary Filmmaking Workshop | Finland 2025</title>
+
   <style>
+    /* === CINEMATIC COLOR PALETTE === */
     :root {
-      --primary: #004f7c;
-      --accent: #6cb4ee;
-      --bg: #f6f9fc;
-      --text: #222;
+      --primary: #0a0a0a;       /* dark black */
+      --accent: #d4af37;        /* cinematic gold */
+      --bg: #141414;
+      --text: #f4f4f4;
     }
+
     body {
-      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
       margin: 0;
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
     }
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white;
-      text-align: center;
-      padding: 80px 20px 60px;
+
+    /* === STICKY TOP BAR === */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 30px;
     }
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+
+    .topbar h1 {
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin: 0;
       letter-spacing: 0.5px;
     }
-    header h2 {
-      font-size: 1.2rem;
-      font-weight: 400;
-      opacity: 0.9;
+
+    .cta-top {
+      text-align: right;
     }
+
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(180deg, #d4af37, #a8831b);
+      color: #000;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+    }
+
+    /* === HEADER === */
+    header {
+      text-align: center;
+      padding: 130px 20px 70px; /* add space for fixed topbar */
+      background: linear-gradient(160deg, #000, #1b1b1b);
+    }
+
+    header h2 {
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    header h3 {
+      font-size: 1.2rem;
+      color: #ccc;
+      font-weight: 400;
+    }
+
     header p {
       margin-top: 1rem;
       font-size: 0.95rem;
       opacity: 0.9;
     }
+
+    /* === MAIN CONTENT === */
     main {
       max-width: 900px;
-      margin: -40px auto 60px;
-      background: white;
+      margin: -30px auto 60px;
+      background: #1b1b1b;
       border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
       padding: 50px 40px;
     }
+
     section {
       margin-bottom: 50px;
     }
-    h3 {
-      color: var(--primary);
+
+    h4 {
+      color: var(--accent);
       border-left: 4px solid var(--accent);
       padding-left: 10px;
       margin-bottom: 15px;
       font-size: 1.3rem;
     }
+
     ul, ol {
       padding-left: 20px;
     }
+
     em { color: var(--accent); font-style: normal; }
+
+    /* === CONTACT === */
+    .contact-box {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      color: #ddd;
+    }
+
+    .contact-box a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* === FOOTER === */
     footer {
       text-align: center;
       padding: 40px 20px;
       font-size: 0.9rem;
-      color: #555;
+      color: #aaa;
+      border-top: 1px solid #333;
+      background: #0a0a0a;
     }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    hr {
-      border: none;
-      height: 1px;
-      background: #eee;
-      margin: 40px 0;
-    }
+
     @media (max-width: 650px) {
+      .topbar { flex-direction: column; gap: 10px; padding: 15px; }
       main { padding: 30px 20px; }
-      header h1 { font-size: 1.6rem; }
+      header h2 { font-size: 1.6rem; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Documentary Filmmaking Workshop</h1>
-  <h2>“CINEMATIC ACTIVISM”</h2>
-  <p><strong>Dates:</strong> November 11–16, 2025<br>
-     <strong>Location:</strong> Helsinki<br>
-     <strong>Tutor:</strong> Martin Fazeli – Director & Filmmaker</p>
-</header>
-
-<main>
-
-  <section>
-    <h3>Introduction</h3>
-    <p> Documentary film is one of the most powerful mediums for truth-telling, critical reflection, and social transformation. Unlike fiction, documentary embraces the raw and complex realities of the world, giving voice to those who are often unheard and shedding light on stories that mainstream narratives may overlook. It holds a mirror to society, revealing both its beauty and its contradictions, its achievements and its injustices. In an era marked by deep social, environmental, and political challenges, documen- tary filmmaking enables individuals and communities to express their lived experiences, advocate for justice, and inspire change. Through intimate storytelling and compelling visual language, it connects people across backgrounds and cultures, fostering empathy,awareness, and civic responsibility.— <em>“CINEMATIC ACTIVISM.”</em></p>
-    <p>Led by acclaimed filmmaker <strong>Martin Fazeli</strong>, this 6-day intensive hands-on program offers participants the opportunity to create short documentaries.</p>
-  </section>
-
-  <section>
-    <h3>Workshop Overview</h3>
-    <ul>
-      <li><strong>Duration:</strong> 6 Days (Nov 11–16, 2025)</li>
-      <li><strong>Format:</strong> In-person, project-based</li>
-      <li><strong>Outcome:</strong> Short group-created documentary films</li>
-      <li><strong>Participants:</strong> Filmmakers, artists, students, environmentalists</li>
-      <li><strong>Focus:</strong> Sustainability, welfare, and Finland’s model of happiness</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Benefits for Finland’s Cultural Landscape</h3>
-    <ol>
-      <li><strong>Culturally Relevant Storytelling:</strong> Empowering participants to create films rooted in Finnish communities and values.</li>
-      <li><strong>Supporting Emerging Artists:</strong> Mentorship that strengthens Finland’s creative ecosystem.</li>
-      <li><strong>Interdisciplinary Collaboration:</strong> Connecting artists, educators, and environmentalists.</li>
-      <li><strong>Cultural Archive Creation:</strong> Documenting Finland’s evolving identity.</li>
-      <li><strong>Public Engagement:</strong> Bringing art closer to communities through screenings and discussions.</li>
-    </ol>
-  </section>
-
-  <section>
-    <h3>Learning Objectives</h3>
-    <ul>
-      <li>Understand documentary ethics and storytelling structure</li>
-      <li>Develop technical filmmaking and editing skills</li>
-      <li>Collaborate to produce short thematic documentaries</li>
-      <li>Explore how sustainability and welfare intersect with happiness</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Workshop Schedule</h3>
-    <p><strong>Day 1 (Nov 11):</strong> Welcome, screenings, group introductions, lecture on ethics and purpose</p>
-    <p><strong>Day 2 (Nov 12):</strong> Research, narrative structures, interview techniques, pre-production planning</p>
-    <p><strong>Day 3 (Nov 13):</strong> Field interviews and one-on-one mentoring with Martin Fazeli</p>
-    <p><strong>Day 4 (Nov 14):</strong> Filming b-roll, visual storytelling, rough editing begins</p>
-    <p><strong>Day 5 (Nov 15):</strong> Editing workshop, feedback from mentor and peers</p>
-    <p><strong>Day 6 (Nov 16):</strong> Final edits, sound mix, screening & discussion</p>
-  </section>
-
-  <section>
-    <h3>Thematic Focus</h3>
-    <ul>
-      <li>Green urban development & eco-living</li>
-      <li>Education and mental well-being</li>
-      <li>Sustainable lifestyles and circular economy</li>
-      <li>Welfare, equality, and daily happiness</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Collaborations</h3>
-    <ul>
-      <li>Municipalities & NGOs for local partnerships</li>
-      <li>Film schools & universities for outreach</li>
-      <li>Cultural & environmental foundations for funding</li>
-      <li>Media partners for visibility and technical support</li>
-    </ul>
-  </section>
-
-  <hr>
-
-  <section>
-    <h3>Contact</h3>
-    <p>
-      <strong>Mohammad Bahrami +358 417238729 </strong> & <strong>J. H. Taghinia</strong><br>
-      Email: <a href="mailto:Rira.Association@gmail.com">Rira.Association@gmail.com</a>
-    </p>
-  </section>
-
-  <section>
-    <h3>Director’s Bio – Hossein Martin Fazeli</h3>
-    <p>Hossein Martin Fazeli is an award-winning director with over two decades of experience producing and directing fiction and non-fiction films. His works have aired on CBC, BBC, ARTE, and Canal+, and received over 45 international awards. He has collaborated with the UNDP, European Commission, and Nonviolence International on projects addressing human rights, women’s rights, and minority issues.</p>
-    <p>He was selected by the Sundance Institute for the International Filmmakers Award (2008) and has lectured at SFU (Canada), SOAS (UK), Aarhus University (Denmark), and the European Film Academy.</p>
-    <p>More info: <a href="https://www.imdb.com/name/nm3347515/" target="_blank">IMDb Profile</a></p>
-  </section>
-
-</main>
-</body>
-</html>
-<!-- Paste this into your GitHub Pages HTML (e.g., index.html) -->
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CINEMATIC ACTIVISM - Pre-register</title>
-  <style>
-    .cta-container {
-      display:flex;
-      justify-content:center;
-      padding:30px 10px;
-    }
-    .cta-button {
-      display:inline-block;
-      text-decoration:none;
-      font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      font-weight:600;
-      padding:14px 22px;
-      border-radius:12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      background: linear-gradient(180deg,#2fbf6f,#1e9a55);
-      color:#fff;
-      font-size:16px;
-      border: none;
-      transition: transform .12s ease, box-shadow .12s ease;
-    }
-    .cta-button:hover{ transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,0.16); }
-    .cta-sub { text-align:center; margin-top:10px; color:#444; font-size:14px; }
-  </style>
-</head>
-<body>
-  <main>
-    <section class="cta-container">
+  <!-- === STICKY TOP BAR === -->
+  <div class="topbar">
+    <h1>CINEMATIC ACTIVISM Workshop</h1>
+    <div class="cta-top">
       <a class="cta-button"
          href="https://forms.gle/uYpHrhBxG6Grq6yy6"
          target="_blank"
          rel="noopener noreferrer">
-        Pre-register for CINEMATIC ACTIVISM Workshop 
+        🎬 Pre-register 
       </a>
+    </div>
+  </div>
+
+  <!-- === HEADER === -->
+  <header>
+    <h2>Documentary Filmmaking Workshop</h2>
+    <h3>Finland • November 11–16, 2025</h3>
+    <p>
+      <strong>Tutor:</strong> Hossein Martin Fazeli – Director & Filmmaker
+    </p>
+  </header>
+
+  <!-- === MAIN CONTENT === -->
+  <main>
+    <section>
+      <h4>Introduction</h4>
+      <p>
+        Documentary film is one of the most powerful mediums for truth-telling, reflection, and social transformation.
+        Through <em>“CINEMATIC ACTIVISM”</em>, participants will explore how visual storytelling can shape awareness and inspire change.
+      </p>
+      <p>
+        Led by award-winning filmmaker <strong>Hossein Martin Fazeli</strong>, this six-day hands-on workshop provides
+        the opportunity to craft meaningful short documentaries.
+      </p>
     </section>
 
-    <p class="cta-sub" style="text-align:center">
-      Click the button to open the Google Form and pre-register.
-    </p>
+    <section>
+      <h4>Workshop Overview</h4>
+      <ul>
+        <li><strong>Duration:</strong> 6 Days (Nov 11–16, 2025)</li>
+        <li><strong>Format:</strong> In-person, project-based</li>
+        <li><strong>Outcome:</strong> Short collaborative documentary films</li>
+        <li><strong>Participants:</strong> Filmmakers, artists, students, activists</li>
+        <li><strong>Focus:</strong> Sustainability, welfare, and Finland’s model of happiness</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>Learning Objectives</h4>
+      <ul>
+        <li>Understand documentary ethics and narrative structures</li>
+        <li>Develop technical filmmaking and editing skills</li>
+        <li>Collaborate to produce thematic short documentaries</li>
+        <li>Explore how sustainability and welfare connect to happiness</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>Contact</h4>
+      <div class="contact-box">
+        <p>
+          <strong>📞 Mohammad Bahrami</strong><br>
+          Tel: +358 417238729
+        </p>
+        <p>
+          <strong>📞 Henrik Taghinia</strong><br>
+          Tel: +358 449741391
+        </p>
+        <p>
+          <strong>📧 Email:</strong>
+          <a href="mailto:Rira.Association@gmail.com">Rira.Association@gmail.com</a>
+        </p>
+        <p>
+          <strong>Association:</strong> Rira ry – Helsinki, Finland
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h4>Director’s Bio – Hossein Martin Fazeli</h4>
+      <p>
+        Hossein Martin Fazeli is an award-winning director with over two decades of experience producing and directing
+        fiction and non-fiction films. His works have aired on CBC, BBC, ARTE, and Canal+, and received over 45 international awards.
+      </p>
+      <p>
+        He has collaborated with the UNDP, European Commission, and Nonviolence International on projects addressing
+        human rights, women’s rights, and minority issues. He was selected by the Sundance Institute for the International
+        Filmmakers Award (2008) and has lectured at SFU (Canada), SOAS (UK), Aarhus University (Denmark), and the European Film Academy.
+      </p>
+      <p>
+        More info:
+        <a href="https://www.imdb.com/name/nm3347515/" target="_blank" rel="noopener noreferrer">IMDb Profile</a>
+      </p>
+    </section>
   </main>
+
+  <footer>
+    © 2025 Rira Association – Documentary Filmmaking Workshop
+  </footer>
 </body>
 </html>
-<footer>
-  &copy; 2025 Rira Association – Documentary Filmmaking Workshop
-</footer>
