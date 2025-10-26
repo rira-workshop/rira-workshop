@@ -73,7 +73,7 @@ body::before {
   max-width: 850px;
   margin: 120px auto 60px;
   padding: 40px;
-  background: rgba(30, 30, 30, 0.85);
+  background: rgba(30, 30, 30, 0.65);
   border-radius: 15px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(6px);
