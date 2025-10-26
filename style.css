@@ -1,11 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 body {
-  background-color: #0a0a0a;
+  background-color: #0b0b0b;
   color: #d8e3f0;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   line-height: 1.7;
+  background-image: 
+    url('photo_2025-10-26_20-42-52.jpg'),
+    radial-gradient(circle at center, #101010 0%, #050505 100%);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Film grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/noise.png');
+  opacity: 0.15; /* شدت نویز */
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Header */
@@ -13,7 +33,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(8, 8, 8, 0.95);
+  background-color: rgba(10, 10, 10, 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +50,7 @@ body {
 
 /* Button */
 .btn {
-  background-color: #0d3b75; /* آبی پررنگ‌تر */
+  background-color: #0d3b75;
   color: white;
   padding: 10px 24px;
   text-decoration: none;
@@ -39,41 +59,65 @@ body {
   letter-spacing: 0.5px;
   box-shadow: 0 0 12px rgba(13, 59, 117, 0.6);
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
 }
 
 .btn:hover {
-  background-color: #1557b0; /* آبی روشن‌تر در حالت hover */
+  background-color: #1557b0;
   box-shadow: 0 0 18px rgba(21, 87, 176, 0.9);
 }
 
-/* Main Container */
+/* Container */
 .container {
   max-width: 850px;
   margin: 120px auto 60px;
-  padding: 0 20px;
+  padding: 40px;
+  background: rgba(30, 30, 30, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  position: relative;
+  z-index: 1;
 }
 
-/* Typography */
-h1, h2, h3 {
+/* Title Section */
+.intro {
+  text-align: center;
+  padding: 40px;
+  margin-bottom: 20px;
+  border: 2px solid #1f4e8a;
+  border-radius: 12px;
+  background: rgba(12, 12, 12, 0.8);
+  box-shadow: 0 0 20px rgba(31, 78, 138, 0.4);
+}
+
+.intro h1 {
+  font-size: 2.8em;
+  color: #b8c8e8;
+  margin-bottom: 0.2em;
+  letter-spacing: 2px;
+}
+
+.intro h2 {
+  font-size: 1.4em;
+  color: #9db9ff;
+  margin-bottom: 1em;
+}
+
+/* Headings */
+h3 {
   color: #b8c8e8;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
+  margin-top: 40px;
 }
 
-h1 {
-  font-size: 2.4em;
-  margin-bottom: 0.2em;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-  color: #9db9ff;
-}
-
+/* Text Elements */
 hr {
   border: 0;
-  border-top: 1px solid #222;
+  border-top: 1px solid #333;
   margin: 35px 0;
 }
 
@@ -83,7 +127,7 @@ ul {
 }
 
 a {
-  color: #2d73ff; /* لینک آبی پررنگ‌تر */
+  color: #2d73ff;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -103,7 +147,7 @@ footer {
   padding-top: 20px;
 }
 
-/* Optional cinematic fade-in animation */
+/* Cinematic fade animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
