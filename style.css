@@ -1,74 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 body {
-  background-color: #0b0b0b;
+  background-color: #0a0a0a;
   color: #d8e3f0;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   line-height: 1.7;
 }
 
+/* Header */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(5, 5, 5, 0.9);
+  background-color: rgba(8, 8, 8, 0.95);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
   z-index: 100;
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1c1c1c;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
 }
 
+/* Logo */
 .logo {
   height: 60px;
 }
 
+/* Button */
 .btn {
-  background-color: #1f4e8a;
+  background-color: #0d3b75; /* آبی پررنگ‌تر */
   color: white;
-  padding: 10px 22px;
+  padding: 10px 24px;
   text-decoration: none;
   border-radius: 25px;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 12px rgba(13, 59, 117, 0.6);
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #3174d3;
+  background-color: #1557b0; /* آبی روشن‌تر در حالت hover */
+  box-shadow: 0 0 18px rgba(21, 87, 176, 0.9);
 }
 
+/* Main Container */
 .container {
   max-width: 850px;
   margin: 120px auto 60px;
   padding: 0 20px;
 }
 
+/* Typography */
 h1, h2, h3 {
-  color: #b0c4de;
+  color: #b8c8e8;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 0.2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: #9db9ff;
+}
+
 hr {
   border: 0;
-  border-top: 1px solid #333;
-  margin: 30px 0;
+  border-top: 1px solid #222;
+  margin: 35px 0;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 25px;
 }
 
 a {
-  color: #6ea8ff;
+  color: #2d73ff; /* لینک آبی پررنگ‌تر */
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
+  color: #4c8cff;
   text-decoration: underline;
 }
 
+/* Footer */
 footer {
   text-align: center;
   font-size: 0.9em;
   margin-top: 40px;
   color: #9ba8b8;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+}
+
+/* Optional cinematic fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section, footer {
+  animation: fadeIn 1s ease;
 }
