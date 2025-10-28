@@ -156,3 +156,9 @@ footer {
 section, footer {
   animation: fadeIn 1s ease;
 }
+@media (max-width: 600px) {
+  .intro h1 {
+    font-size: 1.8em;
+    line-height: 1.2;
+  }
+}
